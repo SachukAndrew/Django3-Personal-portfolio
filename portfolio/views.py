@@ -5,3 +5,6 @@ from django.http import HttpResponse
 def home(request):
     projects = Project.objects.all()
     return render(request, 'portfolio/home.html', {'projects': projects})
+
+menu = [{"title": "Linkedin", "url_name": "Linkedin_link" },
+]

@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, HttpResponse, HttpResponseRedirect
 
 from .models import Message
 
@@ -10,3 +10,6 @@ def all_blogs(request):
 def detail(request, blog_id):
     blog = get_object_or_404(Message, pk=blog_id)
     return render(request, 'blog/detail.html', {"blog": blog})
+
+def Linkedin(request):
+    return HttpResponseRedirect('https://www.linkedin.com/in/andrey-sachuk/')
